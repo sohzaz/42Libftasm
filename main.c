@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <assert.h>
 #include "libfts.h"
+#include <strings.h>
+#include <unistd.h>
 
 int main() 
 {
+	char str1[10] = "AAAAAAA";
+	char str2[10] = "AAAAAAA";
+
 	assert(ft_islower('c') == 1);
 	assert(ft_islower(96) == 0);
 	assert(ft_islower('%') == 0);
@@ -35,7 +40,41 @@ int main()
 	assert(ft_isdigit('5') == 1);
 	assert(ft_isdigit('A') == 0);
 	printf("ft_isdigit : Success !\n");
+	printf("ft_bzero test 1\n");
+	printf("pre-bzero : str1 = \"%s\" str2 = \"%s\"\n", str1, str2);
+	bzero(str1, 5);
+	ft_bzero(str2, 5);
+	printf("post-bzero:\n");
+	printf("str1\n");
+	write(1, str1, 10);
+	write(1, "\n", 1);
+	printf("str2\n");
+	write(1, str2, 10);
+	write(1, "\n", 1);
+	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str1, str2);
+	char str3[10] = "BBBBBBB";
+	char str4[10] = "BBBBBBB";
+	printf("ft_bzero test 2\n");
+	printf("pre-bzero : str1 = \"%s\" str2 = \"%s\"\n", str3, str4);
+	bzero(str3, 1);
+	ft_bzero(str4, 1);
+	printf("post-bzero:\n");
+	printf("str1\n");
+	write(1, str3, 10);
+	write(1, "\n", 1);
+	printf("str2\n");
+	write(1, str4, 10);
+	write(1, "\n", 1);
+	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str3, str4);
+
+	
 
 
 
+
+
+
+
+
+	return (0);
 }
