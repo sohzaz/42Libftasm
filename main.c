@@ -66,8 +66,14 @@ int main()
 	write(1, str4, 10);
 	write(1, "\n", 1);
 	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str3, str4);
+	printf("ft_strcat test1\n");
+	char str5[20] = "BBBBD";
+	char str6[10] = "CAAAA";
+ft_strcat(str5, str6);
+	printf("%s\n", str5);
 
-	
+
+
 
 
 
