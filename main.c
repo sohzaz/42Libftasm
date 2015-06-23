@@ -71,6 +71,9 @@ int main()
 	char str6[10] = "CAAAA";
 ft_strcat(str5, str6);
 	printf("%s\n", str5);
+	printf("test puts");
+	ft_puts("Hello World");
+	write(1, "A", 1);
 
 
 

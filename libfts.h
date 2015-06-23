@@ -6,7 +6,7 @@
 /*   By: dbreton <dbreton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/26 14:37:07 by dbreton           #+#    #+#             */
-/*   Updated: 2015/06/16 12:02:20 by dbreton          ###   ########.fr       */
+/*   Updated: 2015/06/16 14:12:33 by dbreton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int ft_isdigit(int c);
 int ft_isascii(int c);
 void ft_bzero(void *s, size_t n);
 char *ft_strcat(char *s1, const char *s2);
+void ft_puts(char const *s);
 
 #endif
