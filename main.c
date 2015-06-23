@@ -81,6 +81,40 @@ ft_strcat(str5, str6);
 	assert(ft_strlen("ste") == strlen("STE"));
 	ft_strlen(NULL);
 	printf("Test ft_strlen : success!\n");
+	printf("ft_memset test 1\n");
+	char str7[20] = "AAAAAA";
+	char str8[10] = "AAAAAA";
+	printf("pre-memset : str1 = \"%s\" str2 = \"%s\"\n", str7, str8);
+	memset(str7,'D', 5);
+	ft_memset(str8, 'D', 5);
+	printf("post-memset:\n");
+	printf("str1\n");
+	write(1, str7, 10);
+	write(1, "\n", 1);
+	printf("str2\n");
+	write(1, str8, 10);
+	write(1, "\n", 1);
+	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str7, str8);
+	char str9[10] = "BBBBBBB";
+	char str10[10] = "BBBBBBB";
+	printf("ft_memset test 2\n");
+	printf("pre-memset : str1 = \"%s\" str2 = \"%s\"\n", str9, str10);
+	memset(str9, 'D', 1);
+	ft_memset(str10, 'D', 1);
+	printf("post-memset:\n");
+	printf("str1\n");
+	write(1, str9, 10);
+	write(1, "\n", 1);
+	printf("str2\n");
+	write(1, str10, 10);
+	write(1, "\n", 1);
+	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str9, str10);
+	char str11[20] = "test";
+	char str12[20] = "toto";
+	printf("pre-memcpy : str1 = \"%s\" str2 = \"%s\"\n", str11, str12);
+	ft_memcpy(str11, str12, 3);
+	printf("post-memcpy : str1 = \"%s\" str2 = \"%s\"\n", str11, str12);
+
 
 
 
