@@ -77,6 +77,10 @@ ft_strcat(str5, str6);
 	write(1, "A", 1);
 	ft_puts(NULL);
 	puts(NULL);
+	assert(ft_strlen("HELLO") == strlen("HELLO"));
+	assert(ft_strlen("ste") == strlen("STE"));
+	ft_strlen(NULL);
+	printf("Test ft_strlen : success!\n");
 
 
 
