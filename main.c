@@ -115,6 +115,11 @@ ft_strcat(str5, str6);
 	ft_memcpy(str11, str12, 3);
 	printf("post-memcpy : str1 = \"%s\" str2 = \"%s\"\n", str11, str12);
 
+	char *str13; 
+		str13 =  ft_strdup(str11);
+	printf("%d\n",	ft_strlen(str11));
+	printf("%s\n", str13);
+
 
 
 

@@ -1,10 +1,11 @@
+section .data
 global _ft_puts
 
 init:
 	.null: dw `(null)\n`
 	.string: db 10
 
-
+section .text
 _ft_puts:
 	cmp rdi, 0
 	je fail
