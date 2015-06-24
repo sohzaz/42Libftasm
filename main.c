@@ -6,7 +6,7 @@
 
 int main() 
 {
-	char str1[10] = "AAAAAAA";
+/*	char str1[10] = "AAAAAAA";
 	char str2[10] = "AAAAAAA";
 
 	assert(ft_islower('c') == 1);
@@ -117,8 +117,18 @@ ft_strcat(str5, str6);
 
 	char *str13; 
 		str13 =  ft_strdup(str11);
-	printf("%d\n",	ft_strlen(str11));
+	char *str14;
+		str14 = strdup(str11);
 	printf("%s\n", str13);
+	printf("%s\n", str14);
+	str13 = ft_strdup("One More tesT");
+	str14 = strdup("One More tesT");
+
+	printf("%s\n", str13);
+	printf("%s\n", str14);*/
+	int fd = open("ft_strlen.s", O_RDWR);
+	printf("%d\n", fd);
+	ft_cat(0);
 
 
 
