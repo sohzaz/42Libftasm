@@ -2,7 +2,7 @@ section .data
 global _ft_puts
 
 init:
-	.null: dw `(null)\n`
+	.null: db `(null)\n`
 	.string: db 10
 
 section .text
