@@ -21,6 +21,7 @@ OBJ_S = $(SRC_S:.s=.o)
 
 all: $(NAME)
 	ar -rs $(NAME) $(OBJ_S)
+	ranlib $(NAME)
 
 $(NAME): $(OBJ_S)
 

@@ -6,9 +6,6 @@
 
 int main() 
 {
-	char str1[10] = "AAAAAAA";
-	char str2[10] = "AAAAAAA";
-
 	assert(ft_islower('c') == 1);
 	assert(ft_islower(96) == 0);
 	assert(ft_islower('%') == 0);
@@ -40,15 +37,23 @@ int main()
 	assert(ft_isdigit('5') == 1);
 	assert(ft_isdigit('A') == 0);
 	printf("ft_isdigit : Success !\n");
+	assert(ft_strlen("HELLO") == strlen("HELLO"));
+	assert(ft_strlen("ste") == strlen("STE"));
+	ft_strlen(NULL);
+	printf("ft_strlen : Success !\n");
+
+	//=====bzero===//
+	char str1[10] = "AAAAAAA";
+	char str2[10] = "AAAAAAA";
 	printf("ft_bzero test 1\n");
 	printf("pre-bzero : str1 = \"%s\" str2 = \"%s\"\n", str1, str2);
 	bzero(str1, 5);
 	ft_bzero(str2, 5);
 	printf("post-bzero:\n");
-	printf("str1\n");
+	write(1,"str1: ", 6);
 	write(1, str1, 10);
 	write(1, "\n", 1);
-	printf("str2\n");
+	write(1, "str2: ", 6);
 	write(1, str2, 10);
 	write(1, "\n", 1);
 	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str1, str2);
@@ -59,77 +64,81 @@ int main()
 	bzero(str3, 1);
 	ft_bzero(str4, 1);
 	printf("post-bzero:\n");
-	printf("str1\n");
+	write(1,"str1: ", 6);
 	write(1, str3, 10);
 	write(1, "\n", 1);
-	printf("str2\n");
+	write(1,"str2: ", 6);
 	write(1, str4, 10);
 	write(1, "\n", 1);
 	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str3, str4);
-	printf("ft_strcat test1\n");
+
+	//=====strcat====//
+	printf("\n===Test strcat===\n");
 	char str5[20] = "BBBBD";
 	char str6[10] = "CAAAA";
-ft_strcat(str5, str6);
-	printf("%s\n", str5);
-	printf("test puts\n");
-	int toto = ft_puts("Hello World");
-	printf("%d\n", toto);
+	printf("str1 = %s , str2 = %s\n", str5, str6);
+	ft_strcat(str5, str6);
+	printf("strcat: %s\n", str5);
+
+	//===puts===//
+	printf("\n===Tests puts===\n");
+	ft_puts("Hello World");
 	puts("Hello World");
 	ft_puts(NULL);	
 	puts(NULL);
-	//write(1, "\n", 1);
-	assert(ft_strlen("HELLO") == strlen("HELLO"));
-	assert(ft_strlen("ste") == strlen("STE"));
-	printf("%d\n",ft_strlen(NULL));
-	printf("Test ft_strlen : success!\n");
-	printf("ft_memset test 1\n");
+	//===memset===//
+	printf("\n===Tests memset===\n");
+	printf("test 1 memset(str1,'D', 5) ft_memset(str2, 'D', 5)\n");
 	char str7[20] = "AAAAAA";
 	char str8[10] = "AAAAAA";
 	printf("pre-memset : str1 = \"%s\" str2 = \"%s\"\n", str7, str8);
 	memset(str7,'D', 5);
 	ft_memset(str8, 'D', 5);
 	printf("post-memset:\n");
-	printf("str1\n");
-	write(1, str7, 10);
-	write(1, "\n", 1);
-	printf("str2\n");
-	write(1, str8, 10);
-	write(1, "\n", 1);
-	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str7, str8);
+	printf("str1: %s\n", str7);
+	printf("str2: %s\n", str8);
 	char str9[10] = "BBBBBBB";
 	char str10[10] = "BBBBBBB";
-	printf("ft_memset test 2\n");
+	printf("test 2 memset(str1, 'D', 1);ft_memset(str2, 'D', 1)\n");
 	printf("pre-memset : str1 = \"%s\" str2 = \"%s\"\n", str9, str10);
 	memset(str9, 'D', 1);
 	ft_memset(str10, 'D', 1);
 	printf("post-memset:\n");
-	printf("str1\n");
-	write(1, str9, 10);
-	write(1, "\n", 1);
-	printf("str2\n");
-	write(1, str10, 10);
-	write(1, "\n", 1);
-	printf("with printf : str1 = \"%s\" str2 = \"%s\"\n", str9, str10);
+	printf("str1: %s\n", str9);
+	printf("str2: %s\n", str10);
+	//===memcpy===//
+	printf("\n===Test memcpy===\n");
 	char str11[20] = "test";
 	char str12[20] = "toto";
 	printf("pre-memcpy : str1 = \"%s\" str2 = \"%s\"\n", str11, str12);
 	ft_memcpy(str11, str12, 3);
 	printf("post-memcpy : str1 = \"%s\" str2 = \"%s\"\n", str11, str12);
 
+
+	//===strdup===//
+	printf("\n===Test strdup===\n");
+	printf("--original str: %s\n--", str11);
 	char *str13; 
-		str13 =  ft_strdup(str11);
+	str13 =  ft_strdup(str11);
 	char *str14;
-		str14 = strdup(str11);
-	printf("%s\n", str13);
-	printf("%s\n", str14);
+	str14 = strdup(str11);
+	printf("ft_strdup: %s\n", str13);
+	printf("libc: %s\n", str14);
 	str13 = ft_strdup("One More tesT");
 	str14 = strdup("One More tesT");
 
 	printf("%s\n", str13);
 	printf("%s\n", str14);
-	int fd = open("ft_strlen.s", O_RDONLY);
-	printf("%d\n", fd);
+
+	//===cat===//
+	printf("\n===Tests ft_cat===\n");
+	printf("--Read a file--\n");
+	int fd = open("Makefile", O_RDONLY);
 	ft_cat(fd);
+	ft_cat(55);
+	printf("--Read from stdin (type something)--\n");
+	ft_cat(0);
+
 
 
 
