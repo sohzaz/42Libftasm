@@ -1,6 +1,6 @@
 NAME = libfts.a
-
-
+CFLAGS = -Wall -Wextra -Werror
+SRC_C = main.c
 SRC_S =	ft_isalpha.s\
 		ft_isascii.s\
 		ft_isdigit.s\
@@ -16,13 +16,26 @@ SRC_S =	ft_isalpha.s\
 		ft_bzero.s\
 		ft_strlen.s\
 		ft_cat.s
-OBJS=$(SRC_S:.s=.o)
-J = 0
+OBJ_S = $(SRC_S:.s=.o)
+
+
 all: $(NAME)
+	ar -rs $(NAME) $(OBJ_S)
 
-
-
-$(NAME): $(OBJS) 
+$(NAME): $(OBJ_S)
 
 %.o : %.s
-	nasm -f macho64 $<
+	nasm -f macho64 $< -o $@
+
+clean:
+	rm -f $(OBJ_S)
+
+fclean: clean
+	rm -f $(NAME)
+	rm -f test
+
+tests: $(NAME) 
+	gcc $(CFLAGS) -o test $(SRC_C) $(NAME) 
+	./test	   
+
+re: fclean all

@@ -5,6 +5,8 @@ extern _ft_strlen
 init: 
 	.ascii db "(null)", 10
 
+
+
 section .text
 nl:
     .str db 10

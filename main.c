@@ -75,8 +75,7 @@ ft_strcat(str5, str6);
 	int toto = ft_puts("Hello World");
 	printf("%d\n", toto);
 	puts("Hello World");
-	ft_puts(NULL);
-	
+	ft_puts(NULL);	
 	puts(NULL);
 	//write(1, "\n", 1);
 	assert(ft_strlen("HELLO") == strlen("HELLO"));
