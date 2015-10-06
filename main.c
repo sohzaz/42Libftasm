@@ -139,6 +139,7 @@ int main()
 	printf("--Read a file--\n");
 	int fd = open("Makefile", O_RDONLY);
 	ft_cat(fd);
+	close(fd);
 	ft_cat(55);
 	printf("--Read from stdin (type something)--\n");
 	ft_cat(0);
