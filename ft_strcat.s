@@ -1,7 +1,7 @@
 global _ft_strcat
 
 _ft_strcat:
-	mov rax, rsi
+	mov rax, rdi
 while1:
 	cmp byte [rdi], 0
 	je next

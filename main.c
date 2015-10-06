@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <assert.h>
 #include "libfts.h"
-#include <strings.h>
+#include <string.h>
 #include <unistd.h>
 
 int main() 
 {
-/*	char str1[10] = "AAAAAAA";
+	char str1[10] = "AAAAAAA";
 	char str2[10] = "AAAAAAA";
 
 	assert(ft_islower('c') == 1);
@@ -72,11 +72,13 @@ int main()
 ft_strcat(str5, str6);
 	printf("%s\n", str5);
 	printf("test puts\n");
-	ft_puts("Hello World");
+	int toto = ft_puts("Hello World");
+	printf("%d\n", toto);
 	puts("Hello World");
-	write(1, "A", 1);
 	ft_puts(NULL);
+	
 	puts(NULL);
+	//write(1, "\n", 1);
 	assert(ft_strlen("HELLO") == strlen("HELLO"));
 	assert(ft_strlen("ste") == strlen("STE"));
 	ft_strlen(NULL);
@@ -125,7 +127,7 @@ ft_strcat(str5, str6);
 	str14 = strdup("One More tesT");
 
 	printf("%s\n", str13);
-	printf("%s\n", str14);*/
+	printf("%s\n", str14);
 	int fd = open("ft_strlen.s", O_RDONLY);
 	printf("%d\n", fd);
 	ft_cat(fd);

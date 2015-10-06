@@ -18,7 +18,6 @@ _ft_isalpha:
 
 .invalid:
 	mov rax, 0
-	jmp .return
 
 .return:
 	ret
