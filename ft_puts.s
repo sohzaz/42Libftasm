@@ -5,14 +5,6 @@ extern _ft_strlen
 init: 
 	.ascii db "(null)", 10
 
-
-<<<<<<< HEAD
-=======
-init:
-	.null: db `(null)\n`
-	.string: db 10
->>>>>>> 4f4b3202ed742e7a9c8d4c445b99fb166dc7416e
-
 section .text
 nl:
     .str db 10

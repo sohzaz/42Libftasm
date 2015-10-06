@@ -6,7 +6,7 @@
 
 int main() 
 {
-/*	char str1[10] = "AAAAAAA";
+	char str1[10] = "AAAAAAA";
 	char str2[10] = "AAAAAAA";
 
 	assert(ft_islower('c') == 1);
@@ -81,7 +81,7 @@ ft_strcat(str5, str6);
 	//write(1, "\n", 1);
 	assert(ft_strlen("HELLO") == strlen("HELLO"));
 	assert(ft_strlen("ste") == strlen("STE"));
-	ft_strlen(NULL);
+	printf("%d\n",ft_strlen(NULL));
 	printf("Test ft_strlen : success!\n");
 	printf("ft_memset test 1\n");
 	char str7[20] = "AAAAAA";
@@ -127,17 +127,10 @@ ft_strcat(str5, str6);
 	str14 = strdup("One More tesT");
 
 	printf("%s\n", str13);
-<<<<<<< HEAD
 	printf("%s\n", str14);
 	int fd = open("ft_strlen.s", O_RDONLY);
 	printf("%d\n", fd);
 	ft_cat(fd);
-=======
-	printf("%s\n", str14);*/
-	int fd = open("ft_strlen.s", O_RDWR);
-	printf("%d\n", fd);
-	ft_cat(0);
->>>>>>> 4f4b3202ed742e7a9c8d4c445b99fb166dc7416e
 
 
 
