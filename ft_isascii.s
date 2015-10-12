@@ -5,14 +5,9 @@ _ft_isascii:
 	jl invalid
 	cmp rdi, 127
 	jg invalid
-	jmp valid
+	mov rax, 1
+	ret
 
 invalid:
 	mov rax, 0
-	jmp end
-
-valid:
-	mov rax, 1
-
-end:
 	ret

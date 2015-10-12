@@ -3,19 +3,12 @@ global _ft_isupper
 _ft_isupper:
 
 	cmp	rdi, 64
-	jg .greater
-	mov rax, 0
-	jmp .return
-
-.greater:
-	cmp  rdi, 91
-	jl .valid
-	mov rax, 0
-	jmp .return
-
-.valid:
+	jl invalid
+	cmp rdi, 91
+	jg invalid
 	mov rax, 1
-	jmp .return
+	ret
 
-.return:
+invalid:
+	mov rax, 0
 	ret

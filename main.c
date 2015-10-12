@@ -130,6 +130,7 @@ int main()
 	printf("--original str: One More tesT --\n");
 	str13 = ft_strdup("One More tesT");
 	str14 = strdup("One More tesT");
+	ft_strdup(NULL);
 
 	printf("ft_strdup: %s\n", str13);
 	printf("libc: %s\n", str14);
@@ -137,6 +138,7 @@ int main()
 	//===cat===//
 	printf("\n===Tests ft_cat===\n");
 	printf("--Read a file--\n");
+	printf("--Makefile--\n");
 	int fd = open("Makefile", O_RDONLY);
 	ft_cat(fd);
 	close(fd);

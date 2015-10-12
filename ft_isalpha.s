@@ -5,19 +5,17 @@ extern _ft_isupper
 _ft_isalpha:
 	call _ft_islower
 	cmp rax, 0
-	je .up
+	je up
 	mov rax, 1
-	jmp .return
+	ret
 
-.up:
+up:
 	call _ft_isupper
 	cmp rax, 0
-	je .invalid
+	je invalid
 	mov rax, 1
-	jmp .return
+	ret
 
-.invalid:
+invalid:
 	mov rax, 0
-
-.return:
 	ret

@@ -2,20 +2,14 @@ global _ft_islower
 
 _ft_islower:
 
-	cmp	rdi, 96
-	jg .greater
-	mov rax, 0
-	jmp .return
-
-.greater:
-	cmp  rdi, 123
-	jl .valid
-	mov rax, 0
-	jmp .return
-
-.valid:
+	cmp	rdi, 97
+	jl invalid
+	cmp  rdi, 122
+	jg invalid
 	mov rax, 1
-	jmp .return
-
-.return:
 	ret
+
+invalid:
+	mov rax, 0
+	ret
+
