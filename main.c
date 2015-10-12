@@ -42,6 +42,18 @@ int main()
 	ft_strlen(NULL);
 	printf("ft_strlen : Success !\n");
 
+	printf("\n===Tests ft_toupper===\n");
+	printf("%c ==> %c\n", 'a', ft_toupper('a'));
+	printf("%c ==> %c\n", 'Q', ft_toupper('Q'));	
+	printf("%c ==> %c\n", '9', ft_toupper('9'));
+	ft_toupper(0);
+
+	printf("\n===Tests ft_tolower===\n");
+	printf("%c ==> %c\n", 'a', ft_tolower('a'));
+	printf("%c ==> %c\n", 'Q', ft_tolower('Q'));	
+	printf("%c ==> %c\n", '9', ft_tolower('9'));
+	ft_tolower(0);
+
 	//=====bzero===//
 	printf("\n===Tests bzero===\n");
 	char str1[10] = "AAAAAAA";

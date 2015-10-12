@@ -15,7 +15,10 @@ SRC_S =	ft_isalpha.s\
 		ft_strdup.s\
 		ft_bzero.s\
 		ft_strlen.s\
-		ft_cat.s
+		ft_cat.s\
+		ft_toupper.s\
+		ft_tolower.s
+
 OBJ_S = $(SRC_S:.s=.o)
 
 

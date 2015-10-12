@@ -6,7 +6,7 @@
 /*   By: dbreton <dbreton@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/06 14:22:30 by dbreton           #+#    #+#             */
-/*   Updated: 2015/10/06 14:22:32 by dbreton          ###   ########.fr       */
+/*   Updated: 2015/10/12 13:38:36 by dbreton          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int ft_isupper(int c);
 int	ft_isprint(int c);
 int ft_isdigit(int c);
 int ft_isascii(int c);
+int ft_toupper(int c);
+int ft_tolower(int c);
 void ft_bzero(void *s, size_t n);
 char *ft_strcat(char *s1, const char *s2);
 int ft_puts(char const *s);
