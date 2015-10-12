@@ -1,5 +1,5 @@
 section .bss
-buff: resb 64 
+buff: resb 512 
 
 section .text
 
