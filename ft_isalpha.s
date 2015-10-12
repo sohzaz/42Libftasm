@@ -1,3 +1,4 @@
+section .text
 global _ft_isalpha
 extern _ft_islower
 extern _ft_isupper
