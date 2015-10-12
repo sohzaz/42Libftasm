@@ -15,7 +15,7 @@ while1:
 	mov rdx, 64
 	lea rsi, [rel buff]
 	syscall
-	jc fail
+	jc end
 	mov r10, rax
 
 	lea rsi, [rel buff]
@@ -23,7 +23,7 @@ while1:
 	mov rdi, 1
 	mov rdx, r10 
 	syscall
-	jc fail
+	jc end 
 	mov rdi, r9
 
 	cmp r10, 64	
@@ -32,8 +32,4 @@ while1:
 
 end:
 	mov rax, 0
-	ret
-
-fail:
-	mov rax, 1
 	ret
