@@ -3,6 +3,7 @@
 #include "libfts.h"
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 
 int main() 
 {
@@ -34,6 +35,11 @@ int main()
 	assert(ft_isprint('>') == 1);
 	assert(ft_isprint(18) == 0);
 	printf("ft_isprint : Success !\n");
+	assert(ft_isascii(25) == isascii(25));
+	assert(ft_isascii(-15) == isascii(-15));
+	assert(ft_isascii(251) == isascii(251));
+	assert(ft_isascii(0) == isascii(0));
+	printf("ft_isascii : Success !\n");
 	assert(ft_isdigit('5') == 1);
 	assert(ft_isdigit('A') == 0);
 	printf("ft_isdigit : Success !\n");
